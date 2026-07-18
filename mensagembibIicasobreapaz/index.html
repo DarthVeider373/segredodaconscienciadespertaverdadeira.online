@@ -2,426 +2,421 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7 Palavras</title>
-
-    <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
-    <link rel="preload" href="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/ab-test/6a24694fc1bee70a991bf1b2/player.js" as="script">
-    <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
-    <link rel="dns-prefetch" href="https://cdn.converteai.net">
-    <link rel="dns-prefetch" href="https://scripts.converteai.net">
-    <link rel="dns-prefetch" href="https://images.converteai.net">
-    <link rel="dns-prefetch" href="https://m3u8.vturb.net">
-    <link rel="dns-prefetch" href="https://license.vturb.com">
-
-    <script>
-        window.pixelId = "6960563b5a131e2c09c4b7e7";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
-    </script>
-
-    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f5f1e8;
-            color: #08234a;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Palavras</title>
+
+  <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+  <link rel="preload" href="https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/ab-test/6a24694fc1bee70a991bf1b2/player.js" as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://m3u8.vturb.net">
+  <link rel="dns-prefetch" href="https://license.vturb.com">
+
+  <script>
+    window.pixelId = "6960563b5a131e2c09c4b7e7";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f1e8;
+      color: #08234a;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .page {
+      min-height: calc(100vh - 150px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      padding: 42px 16px 36px;
 
-.page {
-    min-height: calc(100vh - 150px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+      background-color: #f5f1e8;
+    }
+
 
-    padding: 42px 16px 36px;
+    .title {
+      max-width: 760px;
+      font-size: 31px;
+      line-height: 1.15;
+      font-weight: 900;
+      color: #08234a;
+      margin-bottom: 24px;
+    }
 
-    background-color: #f5f1e8;
-}
+    .video-box {
+      width: 350px;
+      height: 545px;
 
-.title {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
 
+      background: #ddd;
 
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+    }
 
-        .title {
-            max-width: 760px;
-            font-size: 31px;
-            line-height: 1.15;
-            font-weight: 900;
-            color: #08234a;
-            margin-bottom: 24px;
-        }
+    .video-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-        .video-box {
-            width: 350px;
-            height: 545px;
+    .play-button {
+      position: absolute;
 
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
+      width: 78px;
+      height: 78px;
 
-            background: #ddd;
+      border-radius: 50%;
 
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
-        }
+      background: rgba(215, 32, 32, 0.95);
 
-        .video-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
-        .play-button {
-            position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-            width: 78px;
-            height: 78px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+    }
 
-            border-radius: 50%;
+    .play-button::before {
+      content: "";
 
-            background: rgba(215, 32, 32, 0.95);
+      margin-left: 6px;
 
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+      border-left: 24px solid #fff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    footer {
+      min-height: 150px;
 
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
-        }
+      background:
+        linear-gradient(rgba(20, 16, 12, 0.92), rgba(20, 16, 12, 0.92)),
+        url("./images/footer-bg.jpg");
 
-        .play-button::before {
-            content: "";
+      background-size: cover;
+      background-position: center;
 
-            margin-left: 6px;
+      color: rgba(255, 255, 255, 0.38);
 
-            border-left: 24px solid #fff;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-        }
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-        footer {
-            min-height: 150px;
+      text-align: center;
 
-            background:
-                linear-gradient(rgba(20, 16, 12, 0.92), rgba(20, 16, 12, 0.92)),
-                url("./images/footer-bg.jpg");
+      padding: 30px 16px;
 
-            background-size: cover;
-            background-position: center;
+      font-size: 12px;
+      line-height: 1.7;
+    }
 
-            color: rgba(255, 255, 255, 0.38);
+    footer a {
+      color: rgba(255, 255, 255, 0.48);
+      text-decoration: none;
+    }
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    footer p {
+      margin: 14px 0;
+    }
 
-            text-align: center;
+    /* POPUP */
 
-            padding: 30px 16px;
+    .popup-overlay {
+      position: fixed;
+      inset: 0;
 
-            font-size: 12px;
-            line-height: 1.7;
-        }
+      background: rgba(0, 0, 0, 0.72);
 
-        footer a {
-            color: rgba(255, 255, 255, 0.48);
-            text-decoration: none;
-        }
+      display: none;
+      align-items: center;
+      justify-content: center;
 
-        footer p {
-            margin: 14px 0;
-        }
+      z-index: 999;
 
-        /* POPUP */
+      padding: 20px;
+    }
 
-        .popup-overlay {
-            position: fixed;
-            inset: 0;
+    .popup-overlay.active {
+      display: flex;
+    }
 
-            background: rgba(0, 0, 0, 0.72);
+    .popup {
+      width: 100%;
+      max-width: 420px;
 
-            display: none;
-            align-items: center;
-            justify-content: center;
+      background: #fff8ec;
 
-            z-index: 999;
+      border-radius: 20px;
 
-            padding: 20px;
-        }
+      padding: 28px 24px;
 
-        .popup-overlay.active {
-            display: flex;
-        }
+      text-align: center;
 
-        .popup {
-            width: 100%;
-            max-width: 420px;
+      border: 2px solid #d8b76c;
 
-            background: #fff8ec;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 
-            border-radius: 20px;
+      position: relative;
 
-            padding: 28px 24px;
+      animation: popupIn .25s ease;
+    }
 
-            text-align: center;
+    @keyframes popupIn {
+      from {
+        opacity: 0;
+        transform: scale(.92);
+      }
 
-            border: 2px solid #d8b76c;
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    .popup-close {
+      position: absolute;
 
-            position: relative;
+      top: 10px;
+      right: 14px;
 
-            animation: popupIn .25s ease;
-        }
+      border: none;
+      background: transparent;
 
-        @keyframes popupIn {
-            from {
-                opacity: 0;
-                transform: scale(.92);
-            }
+      font-size: 28px;
 
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
+      cursor: pointer;
 
-        .popup-close {
-            position: absolute;
+      color: #6b4b1f;
+    }
 
-            top: 10px;
-            right: 14px;
+    .popup-icon {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
 
-            border: none;
-            background: transparent;
+    .popup h2 {
+      color: #08234a;
 
-            font-size: 28px;
+      font-size: 26px;
+      line-height: 1.2;
 
-            cursor: pointer;
+      margin-bottom: 14px;
+    }
 
-            color: #6b4b1f;
-        }
+    .popup p {
+      color: #443626;
 
-        .popup-icon {
-            font-size: 44px;
-            margin-bottom: 12px;
-        }
+      font-size: 16px;
+      line-height: 1.5;
 
-        .popup h2 {
-            color: #08234a;
+      margin-bottom: 22px;
+    }
 
-            font-size: 26px;
-            line-height: 1.2;
+    .popup button.action {
+      width: 100%;
 
-            margin-bottom: 14px;
-        }
+      border: none;
 
-        .popup p {
-            color: #443626;
+      background: #b9903f;
+      color: #fff;
 
-            font-size: 16px;
-            line-height: 1.5;
+      padding: 15px;
 
-            margin-bottom: 22px;
-        }
+      border-radius: 12px;
 
-        .popup button.action {
-            width: 100%;
+      font-size: 17px;
+      font-weight: 700;
 
-            border: none;
+      cursor: pointer;
 
-            background: #b9903f;
-            color: #fff;
+      transition: .2s;
+    }
 
-            padding: 15px;
+    .popup button.action:hover {
+      background: #a47f32;
+    }
 
-            border-radius: 12px;
+    /* MOBILE */
 
-            font-size: 17px;
-            font-weight: 700;
+    @media(max-width:768px) {
 
-            cursor: pointer;
+      .page {
+        padding: 34px 8px 30px;
+      }
 
-            transition: .2s;
-        }
+      .title {
+        font-size: 24px;
+        line-height: 1.25;
+        max-width: 340px;
+        margin-bottom: 22px;
+      }
 
-        .popup button.action:hover {
-            background: #a47f32;
-        }
+      .video-box {
+        width: 100%;
+        max-width: 438px;
+        height: 545px;
+      }
 
-        /* MOBILE */
+      .play-button {
+        width: 74px;
+        height: 74px;
+      }
 
-        @media(max-width:768px) {
+      .play-button::before {
+        border-left: 22px solid #fff;
+        border-top: 14px solid transparent;
+        border-bottom: 14px solid transparent;
+      }
 
-            .page {
-                padding: 34px 8px 30px;
-                background-size: 140px;
-            }
+      footer {
+        font-size: 10px;
+        padding: 24px 14px;
+      }
 
-            .title {
-                font-size: 24px;
-                line-height: 1.25;
-                max-width: 340px;
-                margin-bottom: 22px;
-            }
+      .popup {
+        padding: 26px 20px;
+      }
 
-            .video-box {
-                width: 100%;
-                max-width: 438px;
-                height: 545px;
-            }
+      .popup h2 {
+        font-size: 24px;
+      }
 
-            .play-button {
-                width: 74px;
-                height: 74px;
-            }
+      .popup p {
+        font-size: 15px;
+      }
+    }
 
-            .play-button::before {
-                border-left: 22px solid #fff;
-                border-top: 14px solid transparent;
-                border-bottom: 14px solid transparent;
-            }
+    @media(max-width:430px) {
 
-            footer {
-                font-size: 10px;
-                padding: 24px 14px;
-            }
+      .video-box {
+        height: 535px;
+      }
 
-            .popup {
-                padding: 26px 20px;
-            }
+      .title {
+        font-size: 23px;
+      }
+    }
 
-            .popup h2 {
-                font-size: 24px;
-            }
+    @media(max-width:390px) {
 
-            .popup p {
-                font-size: 15px;
-            }
-        }
+      .video-box {
+        height: 510px;
+      }
 
-        @media(max-width:430px) {
-
-            .video-box {
-                height: 535px;
-            }
-
-            .title {
-                font-size: 23px;
-            }
-        }
-
-        @media(max-width:390px) {
-
-            .video-box {
-                height: 510px;
-            }
-
-            .title {
-                font-size: 22px;
-            }
-        }
-    </style>
-
-    
+      .title {
+        font-size: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <main class="page">
-
-        <vturb-smartplayer id="ab-6a24694fc1bee70a991bf1b2" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
-        <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/ab-test/6a24694fc1bee70a991bf1b2/player.js", s.async = !0, document.head.appendChild(s); </script>
+  <main class="page">
 
 
-    </main>
+    <vturb-smartplayer id="ab-6a24694fc1bee70a991bf1b2" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+    <script type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/beb06ebc-0219-4b97-b88f-8ccab6eb2442/ab-test/6a24694fc1bee70a991bf1b2/player.js", s.async = !0, document.head.appendChild(s); </script>
 
-    <footer>
 
-        <div>
+  </main>
 
-            <div>
-                <a href="#">Termos de Uso</a> |
-                <a href="#">Política de Privacidade</a>
-            </div>
+  <footer>
 
-            <p>
-                Este site não tem qualquer vínculo com o Youtube ou com o YouTube.
-                Depois que você sai do Youtube, a responsabilidade passa a ser nossa, não deles.
-            </p>
+    <div>
 
-            <div>
-                © 2025 Todos os direitos reservados.
-            </div>
+      <div>
+        <a href="#">Termos de Uso</a> |
+        <a href="#">Política de Privacidade</a>
+      </div>
 
-        </div>
+      <p>
+        Este site não tem qualquer vínculo com o Youtube ou com o YouTube.
+        Depois que você sai do Youtube, a responsabilidade passa a ser nossa, não deles.
+      </p>
 
-    </footer>
-
-    <!-- POPUP -->
-
-    <div class="popup-overlay" id="popup">
-
-        <div class="popup">
-
-            <button class="popup-close" onclick="closePopup()">×</button>
-
-            <div class="popup-icon">🙏</div>
-
-            <h2>
-                Antes de continuar...
-            </h2>
-
-            <p>
-                Prepare seu coração, respire fundo e escute esta oração com fé.
-                Permita que Nossa Senhora desate os nós que hoje prendem a sua vida.
-            </p>
-
-            <button class="action" onclick="closePopup()">
-                Quero escutar a oração
-            </button>
-
-        </div>
+      <div>
+        © 2025 Todos os direitos reservados.
+      </div>
 
     </div>
 
-    <script>
+  </footer>
 
-        function openPopup() {
-            document.getElementById("popup").classList.add("active");
-        }
+  <!-- POPUP -->
 
-        function closePopup() {
-            document.getElementById("popup").classList.remove("active");
-        }
+  <div class="popup-overlay" id="popup">
 
-        document.getElementById("popup").addEventListener("click", function (e) {
+    <div class="popup">
 
-            if (e.target === this) {
-                closePopup();
-            }
+      <button class="popup-close" onclick="closePopup()">×</button>
 
-        });
+      <div class="popup-icon">🙏</div>
 
-    </script>
+      <h2>
+        Antes de continuar...
+      </h2>
+
+      <p>
+        Prepare seu coração, respire fundo e escute esta oração com fé.
+        Permita que Nossa Senhora desate os nós que hoje prendem a sua vida.
+      </p>
+
+      <button class="action" onclick="closePopup()">
+        Quero escutar a oração
+      </button>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function openPopup() {
+      document.getElementById("popup").classList.add("active");
+    }
+
+    function closePopup() {
+      document.getElementById("popup").classList.remove("active");
+    }
+
+    document.getElementById("popup").addEventListener("click", function (e) {
+
+      if (e.target === this) {
+        closePopup();
+      }
+
+    });
+
+  </script>
 
     <script>
         const REDIRECT_URL = "https://segredodaconscienciadespertarverdadeira.online/mensagembiblicasobreapaz/";
